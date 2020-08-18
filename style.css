@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Kalam:wght@400;700&family=Pacifico&family=Shadows+Into+Light&family=Sriracha&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.navbar {
+
+   position: fixed;
+   width: 100%;
+   top: 0;
+   z-index: 2;
+
+
+}
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #263343;
+    padding: 8px 12px;
+}
+
+.navbar-logo {
+    font-size: 24px;
+    color: white;
+    /* font-family: 'Kalam', cursive; */
+    font-family: 'Shadows Into Light', cursive;
+    /* font-family: 'Sriracha', cursive; */
+    /* letter-spacing: 2px; */
+
+}
+
+.navbar-logo i {
+    font-size: 24px;
+    color: tomato;
+    
+}
+
+.navbar-menu {
+    display: flex;
+    width: 70%;
+    list-style: none;
+    justify-content: flex-end;
+}
+
+.navbar-menu li {
+    display: flex;
+    justify-content: flex;
+    height: inherit;
+
+
+}
+
+.navbar-menu a {
+    font-size: 1.2rem;
+}
+
+.navbar-menu li:hover {
+    background-color: #d49466;
+    border-radius: 4px;
+
+}
+
+.navbar-menu li {
+
+    padding: 8px 20px;
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+    color: aliceblue;
+    padding-left: 0;
+}
+
+.navbar-links li {
+    padding: 8px 12px;
+    font-size: 20px;
+
+}
+
+.navbar-toogleBtn {
+    color: aliceblue;
+    font-size: 22px;
+    position: absolute;
+    right: 8px;
+    display: none;
+
+}
+
+.main {
+    background-color: aliceblue;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.main img {
+    height: 430px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.main img:nth-child(1) {
+    grid-column: 1/3;
+    height: auto;
+}
+
+
+.picture img {
+ height: 170px;
+ width: 150px;
+ object-fit: cover;
+ border-radius: 50%;
+ position: absolute;
+ top: 50px;
+ left: 50px;
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .navbar-menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        display: none;
+    }
+
+
+    .navbar-links {
+        width: 100%;
+        justify-content: center;
+        display: none;
+    }
+
+    .navbar-toogleBtn {
+        display: block;
+
+
+    }
+
+}
+
+
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    background-color: rgba(38, 51, 67, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content
+ {
+    position: relative;
+    top: 300px;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay :hover,
+.overlay :focus {
+    color: #f1f1f1;
+}
+
+.writer {
+    position: absolute;
+    color: #818181;
+    font-weight: bolder;
+    letter-spacing: 5px;
+    font-size: 1.5rem;
+    top: 200px;
+    left: 55px;
+}
+
+
+.overlay .closebtn {
+    position: absolute;
+    bottom: 80px;
+    right: 110px;
+    font-size: 30px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .overlay {
+        display: none;
+    }
+
+}
